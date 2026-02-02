@@ -1,0 +1,63 @@
+
+
+@media (max-width: 768px) {
+    
+    .modal-nav {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .ribbon {
+        width: clamp(40px, 8vw, 50px);
+        height: clamp(40px, 8vw, 50px);
+        top: calc(clamp(40px, 8vw, 50px) / -2);
+        left: calc(50% - clamp(40px, 8vw, 50px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .modal-image-container {
+        padding-top: 75%; /* Adjust aspect ratio for mobile */
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    .start-button:hover {
+        transform: none;
+    }
+    
+    .music-toggle:hover {
+        transform: none;
+    }
+}
+
+/* Viewport height fixes for mobile browsers */
+@supports (-webkit-touch-callout: none) {
+    .modal {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: -webkit-fill-available;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
